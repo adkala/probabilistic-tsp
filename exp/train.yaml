@@ -1,0 +1,29 @@
+data_path: "data/train" # not used in template repo
+val_path: "data/val" # not used in template repo
+
+logger: "PrintLogger" # PrintLogger, TensorBoardLogger, WandbLogger
+
+# default exp values
+exp:
+  model: "MLP"
+  optim: "SGD"
+
+  model_params:
+    input_size: 64
+    hidden_size: 8
+    output_size: 2
+
+  optim_params:
+    lr: 1e-3
+
+  dataset_params:
+    flatten: True
+
+  dataloader_params:
+    batch_size: 32
+    shuffle: True
+
+  trainer_params:
+    num_epochs: 10
+    log_interval: 10
+    save_interval: 100

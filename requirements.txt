@@ -1,0 +1,12 @@
+# ml
+torch
+numpy
+
+# exp
+omegaconf
+hydra
+
+# logging
+wandb
+tensorboardX
+tqdm
