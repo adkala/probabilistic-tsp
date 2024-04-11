@@ -37,12 +37,14 @@ class WandbLogger(Logger):
         """
 
         wandb.init(
-            project=...,
-            entity=...,
+            project="probabilistic-tsp",
+            entity="adkala",
             name=name,
             config=OmegaConf.to_container(config),
             mode="online",
+            # mode="disabled",
             id=name,  # for resuming
+            sync_tensorboard=True,
         )
 
         if model:

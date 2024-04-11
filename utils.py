@@ -4,9 +4,8 @@ from functools import reduce
 import time
 
 RUN_NAME_DICT = {
-    "model": "",
-    "optim": "",
-    "optim_params.lr": "lr",  # multi level key
+    "policy": "",
+    "env_gen_fn_nm": "",
 }
 
 

@@ -1,29 +1,22 @@
 data_path: "data/train" # not used in template repo
 val_path: "data/val" # not used in template repo
 
-logger: "PrintLogger" # PrintLogger, TensorBoardLogger, WandbLogger
-
 # default exp values
 exp:
-  model: "MLP"
-  optim: "SGD"
+  policy: "PPO"
+  env_gen_fn: "get_random_graph_env"
+  env_gen_fn_nm: "truerand"
 
-  model_params:
-    input_size: 64
-    hidden_size: 8
-    output_size: 2
-
-  optim_params:
-    lr: 1e-3
-
-  dataset_params:
-    flatten: True
-
-  dataloader_params:
-    batch_size: 32
-    shuffle: True
+  policy_params:
+    verbose: 1
 
   trainer_params:
-    num_epochs: 10
-    log_interval: 10
-    save_interval: 100
+    total_timesteps: 1e7
+    log_interval: 1000
+    save_interval: 50000
+
+  env_gen_fn_params:
+    num_nodes: 6
+    min_dist: 1
+    max_dist: 100
+    seed: 50
