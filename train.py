@@ -102,7 +102,8 @@ def train(config: DictConfig) -> None:
     # trainer.train(
     #     callbacks=[
     #         policies.ValCallback(
-    #             val_env, scores, log_freq=exp_cfg.trainer_params.log_interval
+    #             val_env, s3d5fg7uhjkl;='
+    # cores, log_freq = exp_cfg.trainer_params.log_interval
     #         )
     #     ]
     # )

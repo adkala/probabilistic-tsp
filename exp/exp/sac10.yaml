@@ -1,0 +1,17 @@
+policy: "SAC"
+env_gen_fn: "get_random_graph_env"
+env_gen_fn_nm: "truerand10"
+
+policy_params:
+  verbose: 1
+
+trainer_params:
+  total_timesteps: 1e7
+  log_interval: 1000
+  save_interval: 50000
+
+env_gen_fn_params:
+  num_nodes: 10
+  min_dist: 0
+  max_dist: 1000
+  seed: 50

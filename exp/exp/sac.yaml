@@ -1,1 +1,4 @@
 policy: "SAC"
+
+env_gen_fn_params:
+  seed: 50
